@@ -1,13 +1,13 @@
 # Solar Compliance Engine
 
-## 🚀 Overview
+## Overview
 A **fleet compliance monitoring system** that ingests solar PV performance data, evaluates sites against SLA contracts, and surfaces risks via an interactive dashboard.
 
 Built to simulate real-world workflows of a **Data Analyst / Data Engineer in energy & operations**, focusing on large-scale data processing, SLA monitoring, and business-driven analytics.
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 - **Source:** NREL PVDAQ (OEDI public dataset)  
 - **Link:** https://data.openei.org/submissions/4568  
@@ -15,7 +15,7 @@ Built to simulate real-world workflows of a **Data Analyst / Data Engineer in en
 - **Time Range:** 2010–2020  
 - **Scale:** ~47 million rows (15-minute interval data)  
 
-### ⚠️ Note
+### Note
 Raw data is not included in this repository due to size constraints.  
 
 The dataset is fetched dynamically using the ingestion pipeline:
@@ -25,7 +25,7 @@ python pipeline/ingest.py
 ```
 ---
 
-## 📊 Dashboard Preview
+## Dashboard Preview
 
 ### Fleet Overview
 ![Fleet Overview](assets/fleet_overview.png)
@@ -44,7 +44,7 @@ python pipeline/ingest.py
 
 ---
 
-## 📊 What This System Answers
+## What This System Answers
 
 ### The Three Core Questions
 1. **Is the system actually running?**  
@@ -58,7 +58,7 @@ Service-level agreements define response and resolution times (e.g., 4 hours res
 
 ---
 
-## ⚙️ What Each Component Does
+## What Each Component Does
 
 - **ingest.py**  
 Pulls raw telemetry data from NREL for 14 real solar systems (~47M rows across 10 years) and organizes it into structured format.
@@ -77,48 +77,45 @@ Visualizes all outputs into an interactive dashboard for operational decision-ma
 
 ---
 
-## 📊 Dashboard Walkthrough
+## Dashboard Walkthrough
 
-### 🟢 Fleet Overview
-🔎 Answers: *“Is anything wrong right now?”*
+### Fleet Overview
+Answers: *“Is anything wrong right now?”*
 
 - Total Systems: 14  
 - Fleet Compliant: ~71%  
 - Active Breaches: 2  
 - Avg Risk Score: ~93  
 
-Shows overall fleet health and highlights the worst-performing systems first.
 
 
 ---
 
-### 📈 Compliance Trends
-🔎 Answers: *“Is the fleet improving or degrading over time?”*
+### Compliance Trends
+Answers: *“Is the fleet improving or degrading over time?”*
 
 - Energy compliance remains ~100% (stable)  
 - Uptime fluctuates (~75–85%) → main issue driver  
 - Early volatility due to smaller fleet size  
 
-Used for monthly reviews and trend analysis.
 
 
 ---
 
-### 🔍 Site Drilldown
-🔎 Answers: *“Why is this specific site struggling?”*
+### Site Drilldown
+Answers: *“Why is this specific site struggling?”*
 
 - Shows contract terms (SLA thresholds)  
 - Uptime vs SLA → breach months visible  
 - Energy vs expected production  
 - Full incident history  
 
-Enables root cause analysis per site.
 
 
 ---
 
-### 🛠️ Incident Board
-🔎 Answers: *“What is the service team doing?”*
+### Incident Board
+Answers: *“What is the service team doing?”*
 
 - 500 total incidents  
 - Avg response: ~3.6 hrs  
@@ -129,13 +126,12 @@ Severity levels:
 - 🟠 P2: major  
 - 🟡 P3: minor  
 
-Helps track operational performance and response efficiency.
 
 
 ---
 
-### 🔥 Risk Heatmap
-🔎 Answers: *“Where are the patterns across time and systems?”*
+### Risk Heatmap
+Answers: *“Where are the patterns across time and systems?”*
 
 - Each row = system  
 - Each column = month  
@@ -146,12 +142,10 @@ Insights:
 - Stable systems remain consistently green  
 - Patterns reveal long-term operational issues  
 
-Designed for fast pattern recognition across the fleet.
-
 
 ---
 
-## 🔗 How Everything Connects
+## How Everything Connects
 
 - **Fleet Overview →** What’s wrong now  
 - **Compliance Trends →** Is performance improving  
@@ -159,11 +153,10 @@ Designed for fast pattern recognition across the fleet.
 - **Incident Board →** What actions are taken  
 - **Risk Heatmap →** Long-term patterns  
 
-Each view supports a different stakeholder, from executives to service teams.
 
 ---
 
-## 💡 Real-World Insight Example
+## Real-World Insight Example
 
 The **Andre Agassi school sites in Las Vegas** repeatedly show breaches.
 
@@ -174,8 +167,7 @@ Reason:
 
 ---
 
-## 🎯 Summary
+## Summary
 
 Built an end-to-end analytics system that ingests 47M+ rows of real solar telemetry data, evaluates performance against contractual SLAs, and surfaces operational risks through an interactive dashboard, replicating real-world energy fleet monitoring workflows.
 
-This confirms the system is capturing realistic operational patterns.
