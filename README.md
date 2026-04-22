@@ -4,6 +4,25 @@ I built an end-to-end analytics system that ingests **47M+ rows of real solar te
 
 ---
 
+## 📊 Dashboard Snapshot
+
+### Fleet Overview
+![Fleet Overview](assets/fleet_overview.png)
+
+### Compliance Trends
+![Compliance Trends](assets/compliance_trends.png)
+
+### Site Drilldown
+![Site Drilldown](assets/site_drilldown.png)
+
+### Incident Board
+![Incident Board](assets/incident_board.png)
+
+### Risk Heatmap
+![Risk Heatmap](assets/risk_heatmap.png)
+
+---
+
 ## Focus: Three Core Questions
 
 ### 1. Is the system running?
