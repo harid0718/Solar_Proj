@@ -7,6 +7,24 @@ Built to simulate real-world workflows of a **Data Analyst / Data Engineer in en
 
 ---
 
+## 📦 Dataset
+
+- **Source:** NREL PVDAQ (OEDI public dataset)  
+- **Link:** https://data.openei.org/submissions/4568  
+- **Coverage:** 14 real solar PV systems across the US  
+- **Time Range:** 2010–2020  
+- **Scale:** ~47 million rows (15-minute interval data)  
+
+### ⚠️ Note
+Raw data is not included in this repository due to size constraints.  
+
+The dataset is fetched dynamically using the ingestion pipeline:
+
+```bash
+python pipeline/ingest.py
+```
+---
+
 ## 📊 Dashboard Preview
 
 ### Fleet Overview
@@ -52,7 +70,7 @@ Creates realistic contract data and service tickets (since real internal systems
 Loads processed data into DuckDB and builds aggregated views like monthly uptime and energy production.
 
 - **compliance.py**  
-Core logic layer, compares actual performance vs contractual SLAs and assigns a risk score (0–100) for each system.
+Core logic layer that compares actual performance against contractual SLAs and assigns a risk score (0–100) for each system.
 
 - **dashboard/app.py**  
 Visualizes all outputs into an interactive dashboard for operational decision-making.
@@ -152,6 +170,12 @@ The **Andre Agassi school sites in Las Vegas** repeatedly show breaches.
 Reason:
 - Extreme heat → inverter overheating  
 - Inverters shut down → uptime drops  
-- Repeated downtime → SLA breaches  
+- Repeated downtime → SLA breaches
+
+---
+
+## 🎯 Summary
+
+Built an end-to-end analytics system that ingests 47M+ rows of real solar telemetry data, evaluates performance against contractual SLAs, and surfaces operational risks through an interactive dashboard, replicating real-world energy fleet monitoring workflows.
 
 This confirms the system is capturing realistic operational patterns.
