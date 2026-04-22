@@ -4,7 +4,7 @@ I built an end-to-end analytics system that ingests **47M+ rows of real solar te
 
 ---
 
-## 📊 Dashboard Snapshot
+## Dashboard Snapshot
 
 ### Fleet Overview
 ![Fleet Overview](assets/fleet_overview.png)
