@@ -1,6 +1,6 @@
 ## Overview of the Flag System
 
-I built an end-to-end analytics system that ingests **47M+ rows of real solar telemetry data**, evaluates performance against contractual SLAs, and surfaces operational risks through an interactive dashboard — replicating real-world energy fleet monitoring workflows.
+I built an end-to-end analytics system that ingests **47M+ rows of real solar telemetry data**, evaluates performance against contractual SLAs, and surfaces operational risks through an interactive dashboard, replicating real-world energy fleet monitoring workflows.
 
 ---
 
